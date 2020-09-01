@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 1, 1 )
+
+[node name="environment" type="Node2D"]
+
+[node name="borders" type="Node2D" parent="."]
+
+[node name="border_left" type="StaticBody2D" parent="borders"]
+
+[node name="border_left_collision" type="CollisionShape2D" parent="borders/border_left"]
+position = Vector2( -4.34397, 299.123 )
+scale = Vector2( 4, 300 )
+shape = SubResource( 1 )
+
+[node name="border_right" type="StaticBody2D" parent="borders"]
+
+[node name="border_right_collision" type="CollisionShape2D" parent="borders/border_right"]
+position = Vector2( 803.736, 300.123 )
+scale = Vector2( 4, 300 )
+shape = SubResource( 1 )
