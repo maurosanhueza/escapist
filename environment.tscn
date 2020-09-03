@@ -1,7 +1,12 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1, 1 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 1, 1 )
+
+[sub_resource type="CircleShape2D" id=3]
 
 [node name="environment" type="Node2D"]
 
@@ -10,13 +15,43 @@ extents = Vector2( 1, 1 )
 [node name="border_left" type="StaticBody2D" parent="borders"]
 
 [node name="border_left_collision" type="CollisionShape2D" parent="borders/border_left"]
-position = Vector2( -4.34397, 299.123 )
+position = Vector2( 0, 304 )
 scale = Vector2( 4, 300 )
 shape = SubResource( 1 )
+
+[node name="border_bottom" type="StaticBody2D" parent="borders"]
+
+[node name="border_bottom_collision" type="CollisionShape2D" parent="borders/border_bottom"]
+position = Vector2( 399, -2.38419e-07 )
+rotation = 1.5708
+scale = Vector2( 4, 404 )
+shape = SubResource( 2 )
+
+[node name="border_top" type="StaticBody2D" parent="borders"]
+
+[node name="border_top_collision" type="CollisionShape2D" parent="borders/border_top"]
+position = Vector2( 400, 600 )
+rotation = 1.5708
+scale = Vector2( 4, 404 )
+shape = SubResource( 2 )
 
 [node name="border_right" type="StaticBody2D" parent="borders"]
 
 [node name="border_right_collision" type="CollisionShape2D" parent="borders/border_right"]
-position = Vector2( 803.736, 300.123 )
+position = Vector2( 800, 304 )
 scale = Vector2( 4, 300 )
 shape = SubResource( 1 )
+
+[node name="inside_object_circle" type="StaticBody2D" parent="borders"]
+
+[node name="inside_object_circle_collisio" type="CollisionShape2D" parent="borders/inside_object_circle"]
+position = Vector2( 544, 208 )
+scale = Vector2( 10, 10 )
+shape = SubResource( 3 )
+
+[node name="inside_object_circle2" type="StaticBody2D" parent="borders"]
+
+[node name="inside_object_circle_collisio" type="CollisionShape2D" parent="borders/inside_object_circle2"]
+position = Vector2( 208, 424 )
+scale = Vector2( 10, 10 )
+shape = SubResource( 3 )
